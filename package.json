@@ -1,7 +1,7 @@
 {
   "name": "python-spfcheck2",
   "description": "Node.js wrapper around Python's spf.check2 function which conforms to both RFC4408 and RFC7208",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "author": "Nick Baugh <niftylettuce@gmail.com> (http://niftylettuce.com/)",
   "ava": {
     "failFast": true,
