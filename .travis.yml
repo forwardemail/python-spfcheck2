@@ -1,5 +1,5 @@
 language: python
-python: 3.2
+python: 3.3
 before_install:
   - nvm install v8.3
 install:
