@@ -1,6 +1,6 @@
 # python-spfcheck2
 
-[![build status](https://img.shields.io/travis/niftylettuce/python-spfcheck2.svg)](https://travis-ci.com/niftylettuce/python-spfcheck2)
+[![build status](https://img.shields.io/travis/com/niftylettuce/python-spfcheck2.svg)](https://travis-ci.com/niftylettuce/python-spfcheck2)
 [![code coverage](https://img.shields.io/codecov/c/github/niftylettuce/python-spfcheck2.svg)](https://codecov.io/gh/niftylettuce/python-spfcheck2)
 [![code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo)
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
