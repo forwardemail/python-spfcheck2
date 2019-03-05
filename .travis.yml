@@ -5,7 +5,7 @@ before_install:
 install:
   - npm install -g yarn
   - pip install pyspf
-  - pip install pydns3
+  - pip install py3dns
   - yarn
 script:
   npm run test-coverage

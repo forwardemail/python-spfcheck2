@@ -39,7 +39,7 @@
    > If you are using Python version >= 3:
 
    ```sh
-   pip install pydns3
+   pip install py3dns
    ```
 
    > Otherwise install the older version (note `2.3.4` is the only version that seems to work OK on Mac):
