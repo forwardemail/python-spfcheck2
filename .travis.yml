@@ -1,13 +1,15 @@
-language: node_js
-node_js:
-  - '8'
-  - '10'
-python:
-  - '3.2'
-install:
-  - pip install pyspf
-  - pip install pydns3
-script:
-  npm run test-coverage
-after_success:
-  npm run coverage
+matrix:
+  include:
+    - language: python
+      python: 3.2
+      install:
+        - pip install pyspf
+        - pip install pydns3
+    - language: node_js
+      node_js:
+        - '8'
+        - '10'
+      script:
+        npm run test-coverage
+      after_success:
+        npm run coverage
