@@ -105,6 +105,10 @@ Note that `result` is a String (which also corresponds to a particular `explanat
 | `softfail`  | `domain owner discourages use of this host` |
 | `permerror` | `permanent error in processing`             |
 | `temperror` | `temporary DNS error in processing`         |
+| `none`      |                                             |
+| `local`     | `No SPF result due to local policy`         |
+| `trusted`   | `No SPF check - trusted-forwarder.org`      |
+| `ambiguous` | `No error, but results may vary`            |
 
 An error is thrown if the child process itself (`spf.check2`) errors.
 

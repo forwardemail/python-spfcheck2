@@ -5,7 +5,7 @@ const semver = require('semver');
 const filePath = path.join(__dirname, 'spfcheck2.py');
 
 // ensure python installed
-if (!which('python')) throw new Error(``);
+if (!which('python')) throw new Error(`Python v2.6+ is required`);
 
 const silent = { silent: true };
 
