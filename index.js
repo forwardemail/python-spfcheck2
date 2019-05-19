@@ -7,12 +7,13 @@ const filePath = path.join(__dirname, 'spfcheck2.py');
 // ensure python installed
 if (!which('python')) throw new Error(`Python v2.6+ is required`);
 
-const silent = { silent: true };
+const silent = process.env.NODE_ENV !== 'test';
 
 // ensure python v2.6+
-const version = exec('python --version', silent)
-  .stderr.split(' ')[1]
-  .trim();
+let version = exec('python --version', { silent });
+version = semver.coerce(
+  (version.stdout || version.stderr).split(' ')[1].trim()
+);
 
 if (!semver.satisfies(version, '>= 2.6'))
   throw new Error(
