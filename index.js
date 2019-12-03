@@ -11,10 +11,9 @@ const silent = { silent: true };
 
 // ensure python v2.6+
 let version = exec('python --version', silent);
-version = (version.stdout ? version.stdout : version.stderr)
-  .split(' ')[1]
-  .replace(/[^0-9.]/g, '')
-  .trim();
+version = semver.coerce(
+  (version.stdout || version.stderr).split(' ')[1].trim()
+);
 
 if (!semver.satisfies(version, '>= 2.6'))
   throw new Error(
