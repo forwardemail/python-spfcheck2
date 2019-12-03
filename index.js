@@ -10,8 +10,10 @@ if (!which('python')) throw new Error(`Python v2.6+ is required`);
 const silent = { silent: true };
 
 // ensure python v2.6+
-const version = exec('python --version', silent)
-  .stderr.split(' ')[1]
+let version = exec('python --version', silent);
+version = (version.stdout ? version.stdout : version.stderr)
+  .split(' ')[1]
+  .replace(/[^0-9.]/g, '')
   .trim();
 
 if (!semver.satisfies(version, '>= 2.6'))
@@ -26,12 +28,12 @@ module.exports = function(ip, address, host) {
       silent,
       (code, stdout, stderr) => {
         if (typeof stdout === 'string') {
-          if (stdout.indexOf('ImportError: No module named spf') !== -1)
+          if (stdout.includes('ImportError: No module named spf'))
             stderr = 'Please install "pyspf" locally using `pip install pyspf`';
-          else if (stdout.indexOf('ipaddr module required') !== -1)
+          else if (stdout.includes('ipaddr module required'))
             stderr =
               'Please install "ipaddr" locally using `pip install ipaddr`';
-          else if (stdout.indexOf('ImportError: No module named DNS') !== -1)
+          else if (stdout.includes('ImportError: No module named DNS'))
             stderr = `Please install "dns" locally using \`pip install ${
               semver.satisfies(version, '>= 3') ? 'py3dns' : 'pydns==2.3.4'
             }\``;

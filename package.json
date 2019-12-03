@@ -20,7 +20,7 @@
     "Nick Baugh <niftylettuce@gmail.com> (http://niftylettuce.com/)"
   ],
   "dependencies": {
-    "semver": "^5.6.0",
+    "semver": "^6.3.0",
     "shelljs": "^0.8.3"
   },
   "devDependencies": {
@@ -75,20 +75,18 @@
   ],
   "license": "MIT",
   "lint-staged": {
-    "linters": {
-      "*.js": [
-        "xo --fix",
-        "git add"
-      ],
-      "*.md": [
-        "remark . -qfo",
-        "git add"
-      ],
-      "package.json": [
-        "fixpack",
-        "git add"
-      ]
-    }
+    "*.js": [
+      "xo --fix",
+      "git add"
+    ],
+    "*.md": [
+      "remark . -qfo",
+      "git add"
+    ],
+    "package.json": [
+      "fixpack",
+      "git add"
+    ]
   },
   "main": "index.js",
   "prettier": {

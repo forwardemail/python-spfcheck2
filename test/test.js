@@ -2,7 +2,7 @@ const test = require('ava');
 
 const spfCheck2 = require('..');
 
-const ip = '185.199.108.153';
+const ip = '178.128.149.101';
 const address = 'support@forwardemail.net';
 const host = 'mx1.forwardemail.net';
 
