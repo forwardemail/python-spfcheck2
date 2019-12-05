@@ -54,6 +54,12 @@
    pip install ipaddr
    ```
 
+5. If you run `pip list` and it shows `ipaddress` is installed, you will need to manually remove using the following command until this issue [sdgathman/pyspf#7](https://github.com/sdgathman/pyspf/issues/7) is resolved:
+
+   ```sh
+   sudo rm -rf /usr/lib/python2.7/dist-packages/ipaddress*
+   ```
+
 
 ## Install
 
