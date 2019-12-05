@@ -28,10 +28,10 @@
    python --version
    ```
 
-2. Install the package "pyspf" using `pip` globally:
+2. Install the package "pyspf" using `pip` globally (**NOTE**: Versions > 2.0.11 currently have a bug that I emailed Scott Kitterman with regards to, specifically an exception is thrown of "Global name strict is not defined" due to a bug in the newer codebase that is not yet patched):
 
    ```sh
-   pip install pyspf
+   pip install pyspf==2.0.11
    ```
 
 3. Install the DNS package based off your version of Python:
