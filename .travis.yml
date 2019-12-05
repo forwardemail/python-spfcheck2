@@ -1,11 +1,13 @@
 language: python
-python: 3.3
+python: 2.7
 before_install:
   - nvm install v8.12.0
 install:
+  - sudo rm -rf /usr/lib/python2.7/dist-packages/ipaddress*
   - npm install -g yarn
-  - pip install pyspf
-  - pip install py3dns
+  - pip install pyspf==2.0.11
+  - pip install pydns==2.3.4
+  - pip install ipaddr
   - yarn
 script:
   npm run test-coverage
