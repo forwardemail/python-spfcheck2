@@ -5,6 +5,7 @@ before_install:
 install:
   - npm install -g yarn
   - pip3 install pyspf
+  - pip3 install dnspython
   - yarn
 script:
   npm run test-coverage

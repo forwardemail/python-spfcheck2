@@ -7,7 +7,7 @@ const address = 'support@forwardemail.net';
 const host = 'mx1.forwardemail.net';
 
 test('throws error', async t => {
-  await t.throwsAsync(spfCheck2());
+  await t.throwsAsync(spfCheck2('boop'));
   t.pass();
 });
 

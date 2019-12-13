@@ -28,10 +28,11 @@
    python3 --version
    ```
 
-2. Install the packages [pyspf][]:
+2. Install the packages [pyspf][] and `dnspython`:
 
    ```sh
    pip3 install pyspf
+   pip3 install dnspython
    ```
 
 
