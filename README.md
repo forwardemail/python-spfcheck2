@@ -22,42 +22,16 @@
 
 ## Requirements
 
-1. Ensure that you have a Python version of >=2.6 installed per [pyspf][] requirements:
+1. Ensure that you have a Python version of >= 3.5 installed per [pyspf][] requirements (note that Python v3 is required because of a bug with DNS recursive CNAME lookups on v2.7):
 
    ```sh
-   python --version
+   python3 --version
    ```
 
-2. Install the package "pyspf" using `pip` globally (**NOTE**: Versions > 2.0.11 currently have a bug that I emailed Scott Kitterman with regards to, specifically an exception is thrown of "Global name strict is not defined" due to a bug in the newer codebase that is not yet patched):
+2. Install the packages [pyspf][]:
 
    ```sh
-   pip install pyspf==2.0.11
-   ```
-
-3. Install the DNS package based off your version of Python:
-
-   > If you are using Python version >= 3:
-
-   ```sh
-   pip install py3dns
-   ```
-
-   > Otherwise install the older version (note `2.3.4` is the only version that seems to work OK on Mac):
-
-   ```sh
-   pip install pydns==2.3.4
-   ```
-
-4. Lastly if you are using Python version &lt; 3.3 you will need to install "ipaddr" package:
-
-   ```sh
-   pip install ipaddr
-   ```
-
-5. If you run `pip list` and it shows `ipaddress` is installed, you will need to manually remove using the following command until this issue [sdgathman/pyspf#7](https://github.com/sdgathman/pyspf/issues/7) is resolved:
-
-   ```sh
-   sudo rm -rf /usr/lib/python2.7/dist-packages/ipaddress*
+   pip3 install pyspf
    ```
 
 
