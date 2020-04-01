@@ -4,6 +4,10 @@ import os
 import spf
 import sys
 
+# override max lookup from 10 to 20
+# https://github.com/sdgathman/pyspf/blob/abc534e65ba55a9b61f1f809448a444242b83cce/spf.py#L253
+spf.MAX_LOOKUP = 20
+
 def main():
     if len(sys.argv) != 4:
         print('[' + os.path.basename(__file__) + '] invalid number of arguments.')
